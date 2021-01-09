@@ -42,9 +42,9 @@ var loadSchedule = function(){
         }
         
     }
-   /* $(".row").each(function(index, el) {
+    $(".row").each(function(index, el) {
         auditSchedule(el);
-    });*/
+    });
 };
 
 
