@@ -91,10 +91,10 @@ $("#currentDay").text(todayDate);
 //load schedule on page load
 loadSchedule();
 
-//Audit schedule in every 30 mins
+//Audit schedule in every 15 mins
 setInterval(function () {
     $(".row").each(function(index, el) {
       auditSchedule(el);
       window.location.reload();
     });
-  }, 1200000);
+  }, 900000);
