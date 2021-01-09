@@ -2,6 +2,31 @@
 var schedule=[];
 
 
+//Audit all schedules
+var auditSchedule = function(rowEl) {
+    // get time from schedule element
+    var scheduletime = $(rowEl).attr("id");
+    var past = moment(scheduletime ,"hha");
+    var t = past.format('LTS');
+    
+    // get current time
+    var prtime = moment().format('LTS');
+    var textEl = $(rowEl).find("textarea");
+
+    var a = moment(t,'hh:mm:ss a');
+    var b = moment(prtime, 'hh:mm:ss a');
+    if(a.isAfter(b,'hours'))
+    {
+        $(textEl).addClass("future"); 
+    }
+    else if(a.isBefore(b,'hours')){
+        $(textEl).addClass("past");
+    }
+    else if(a.isSame(b,'hours')){
+        $(textEl).addClass("present");  
+    }    
+  };
+
 //Load all schedules from localstorage
 var loadSchedule = function(){
     var getSchedule = localStorage.getItem("schedule");
@@ -73,3 +98,11 @@ $("#currentDay").text(todayDate);
 
 //load schedule on page load
 loadSchedule();
+
+//Audit schedule in every 30 mins
+setInterval(function () {
+    $(".row").each(function(index, el) {
+      auditSchedule(el);
+      window.location.reload();
+    });
+  }, 1200000);
