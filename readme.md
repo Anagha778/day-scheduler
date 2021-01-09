@@ -40,6 +40,7 @@ The following animation demonstrates the application functionality:
 * JavaScript
 * Jquery
 * Bootstrap
+* moment.js library for Date and Time
 
 ## Website
 
