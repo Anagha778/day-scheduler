@@ -1,7 +1,6 @@
 //Global array variale to store localstorage data
 var schedule=[];
 
-
 //Audit all schedules
 var auditSchedule = function(rowEl) {
     // get time from schedule element
@@ -47,18 +46,12 @@ var loadSchedule = function(){
     });
 };
 
-
 //Get the text and parent id on click of Save button
 $(".row").on("click", "button", function() {
     var flag = false;
     var scheduleNew = [];
     var activityText = $(this).prev().val().trim();
-    if(activityText===null || activityText ==="")
-    {
-        alert("Please enter schedule details");
-    }
-    else
-    {
+   
     var parentrowId = $(this).closest(".row").attr("id");
     //Edit schedule logic
     var getSchedule = localStorage.getItem("schedule");
@@ -88,8 +81,7 @@ $(".row").on("click", "button", function() {
     var localstr = parentrowId+"-"+activityText;
     schedule.push(localstr);
     localStorage.setItem("schedule",JSON.stringify(schedule));   
-    alert("Saved!!!");  
-    }    
+     
  });
 
 //Set current date using momentjs
