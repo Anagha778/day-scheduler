@@ -1,10 +1,10 @@
 # Work Day Scheduler
 
 ## Purpose of application
-A simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+A simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.Code uses moment.js library to work with date and time.
 
 ## Description
-A simple calendar appication that allows a user to save events for each working hour of the day.A current day will be displayed at the top of the calendar. Time blocks have been created for 9am to 5pm business hours. Each time block has textarea where user can enter schedule for that perticular hour and on click of save button it will be saved.User can edit events as well.Each time block is color-coded to indicate whether it is in the past(ight blue), present(red), or future(green). When refresh the page, the saved events persist. Page will be refreshed in every 15 mins to update color-code, which will help user to keep track of schedule.
+A simple calendar appication that allows a user to save events for each working hour of the day.A current day will be displayed at the top of the calendar. Time blocks have been created for 9am to 5pm business hours. Each time block has textarea where user can enter schedule for that perticular hour and on click of save button it will be saved.User can edit events as well.Each time block is color-coded to indicate whether it is in the past(light blue), present(red), or future(green). When refresh the page, the saved events persist. Page will be refreshed in every 15 mins to update color-code, which will help user to keep track of schedule.
 
 
 ## User Story
